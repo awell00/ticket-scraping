@@ -1,0 +1,22 @@
+{
+  "name": "test-puppeteer",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "build": "docker build -t app-puppeteer .",
+    "start": "docker run -p 3000:3000 app-puppeteer",
+    "dev": "rimraf build && tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "express": "~4.16.4",
+    "mongoose": "^7.0.2",
+    "node-cron": "^3.0.2",
+    "puppeteer-core": "^19.7.5"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.17",
+    "@types/node": "^18.15.5",
+    "rimraf": "^4.4.1",
+    "typescript": "^5.0.2"
+  }
+}
